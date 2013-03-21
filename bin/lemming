@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << './lib'
+require './lib/lemming'
+
+lemming = Lemming.new :command => ARGV
+lemming.run
+lemming.results.report
+
+exit(0)

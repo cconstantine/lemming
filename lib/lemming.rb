@@ -1,12 +1,12 @@
 require 'rubygems'
 require 'benchmark'
 require 'timeout'
-require 'result_set'
 require 'thread'
 require 'pty'
 require 'open3'
 require 'json'
-require 'client'
+require File.join(File.dirname(__FILE__), 'result_set.rb')
+require File.join(File.dirname(__FILE__), 'client')
 
 module Lemming
   class Lemming

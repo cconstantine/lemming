@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH << './lib'
-require './lib/lemming'
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'lemming'
 
-lemming = Lemming.new :command => ARGV
+lemming = Lemming::Lemming.new :command => ARGV
 lemming.run
 lemming.results.report
 
